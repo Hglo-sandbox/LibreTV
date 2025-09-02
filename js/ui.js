@@ -67,7 +67,7 @@ function showNextToast() {
     const toastMessage = document.getElementById('toastMessage');
 
     const bgColors = {
-        'error': 'bg-red-500',
+        'error': 'bg-pink-500',
         'success': 'bg-green-500',
         'info': 'bg-blue-500',
         'warning': 'bg-yellow-500'

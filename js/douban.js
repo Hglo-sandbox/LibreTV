@@ -256,6 +256,10 @@ async function fillAndSearchWithDouban(title) {
 }
 
 // 渲染电影/电视剧切换器
+/**
+ * 渲染豆瓣电影/电视剧切换功能
+ * 该函数用于处理电影和电视剧标签页的切换逻辑
+ */
 function renderDoubanMovieTvSwitch() {
     // 获取切换按钮元素
     const movieToggle = document.getElementById('douban-movie-toggle');
@@ -266,10 +270,10 @@ function renderDoubanMovieTvSwitch() {
     movieToggle.addEventListener('click', function() {
         if (doubanMovieTvCurrentSwitch !== 'movie') {
             // 更新按钮样式
-            movieToggle.classList.add('bg-pink-600', 'text-white');
+            movieToggle.classList.add('bg-red-600', 'text-white');
             movieToggle.classList.remove('text-gray-300');
             
-            tvToggle.classList.remove('bg-pink-600', 'text-white');
+            tvToggle.classList.remove('bg-red-600', 'text-white');
             tvToggle.classList.add('text-gray-300');
             
             doubanMovieTvCurrentSwitch = 'movie';
@@ -292,10 +296,10 @@ function renderDoubanMovieTvSwitch() {
     tvToggle.addEventListener('click', function() {
         if (doubanMovieTvCurrentSwitch !== 'tv') {
             // 更新按钮样式
-            tvToggle.classList.add('bg-pink-600', 'text-white');
+            tvToggle.classList.add('bg-red-600', 'text-white');
             tvToggle.classList.remove('text-gray-300');
             
-            movieToggle.classList.remove('bg-pink-600', 'text-white');
+            movieToggle.classList.remove('bg-red-600', 'text-white');
             movieToggle.classList.add('text-gray-300');
             
             doubanMovieTvCurrentSwitch = 'tv';
@@ -340,13 +344,13 @@ function renderDoubanTags(tags) {
         const btn = document.createElement('button');
         
         // 设置样式
-        let btnClass = 'py-1.5 px-3.5 rounded text-sm font-medium transition-all duration-300 border ';
+        let btnClass = 'py-1.5 px-3.5 rounded text-sm font-medium transition-all duration-300 ';
         
         // 当前选中的标签使用高亮样式
         if (tag === doubanCurrentTag) {
-            btnClass += 'bg-pink-600 text-white shadow-md border-white';
+            btnClass += 'bg-red-600 text-white shadow-md';
         } else {
-            btnClass += 'bg-[#1a1a1a] text-gray-300 hover:bg-pink-700 hover:text-white border-[#333] hover:border-white';
+            btnClass += 'bg-[#1a1a1a] text-gray-300 hover:bg-pink-700 hover:text-white';
         }
         
         btn.className = btnClass;
@@ -554,7 +558,7 @@ function renderDoubanCards(data, container) {
                 </div>
                 <div class="p-2 text-center bg-[#111]">
                     <button onclick="fillAndSearchWithDouban('${safeTitle}')" 
-                            class="text-sm font-medium text-white truncate w-full hover:text-pink-400 transition"
+                            class="text-sm text-white truncate w-full hover:text-pink-400 transition"
                             title="${safeTitle}">
                         ${safeTitle}
                     </button>

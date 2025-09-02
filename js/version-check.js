@@ -112,7 +112,7 @@ function formatVersion(versionString) {
 function createErrorVersionElement(errorMessage) {
     const errorElement = document.createElement('p');
     errorElement.className = 'text-gray-500 text-sm mt-1 text-center md:text-left';
-    errorElement.innerHTML = `版本: <span class="text-amber-500">检测失败</span>`;
+    // errorElement.innerHTML = `版本: <span class="text-amber-500">检测失败</span>`;
     errorElement.title = errorMessage;
     return errorElement;
 }
@@ -133,11 +133,11 @@ function addVersionInfoToFooter() {
         versionElement.className = 'text-gray-500 text-sm mt-1 text-center md:text-left';
         
         // 添加当前版本信息
-        versionElement.innerHTML = `版本: ${result.currentFormatted}`;
+        // versionElement.innerHTML = `版本: ${result.currentFormatted}`;
         
         // 如果有更新，添加更新提示
         if (result.hasUpdate) {
-            versionElement.innerHTML += ` <span class="inline-flex items-center bg-red-600 text-white text-xs px-2 py-0.5 rounded-md ml-1 cursor-pointer animate-pulse font-medium">
+            versionElement.innerHTML += ` <span class="inline-flex items-center bg-pink-600 text-white text-xs px-2 py-0.5 rounded-md ml-1 cursor-pointer animate-pulse font-medium">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
@@ -154,7 +154,7 @@ function addVersionInfoToFooter() {
             }, 100);
         } else {
             // 如果没有更新，显示当前版本为最新版本
-            versionElement.innerHTML = `版本: ${result.currentFormatted} <span class="text-green-500">(最新版本)</span>`;
+            // versionElement.innerHTML = `版本: ${result.currentFormatted} <span class="text-green-500">(最新版本)</span>`;
         }
         
         // 显示版本元素
