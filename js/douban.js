@@ -418,7 +418,7 @@ function renderRecommend(tag, pageLimit, pageStart) {
     const loadingOverlayHTML = `
         <div class="absolute inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center z-10">
             <div class="flex items-center justify-center">
-                <div class="w-6 h-6 border-2 border-pink-500 border-t-transparent rounded-full animate-spin inline-block"></div>
+                <div class="w-6 h-6 border-2 border-red-500 border-t-transparent rounded-full animate-spin inline-block"></div>
                 <span class="text-red-500 ml-4">加载中...</span>
             </div>
         </div>
@@ -638,7 +638,7 @@ function showTagManageModal() {
                 <h4 class="text-lg font-medium text-gray-300 mb-3">添加新标签</h4>
                 <form id="addTagForm" class="flex items-center">
                     <input type="text" id="newTagInput" placeholder="输入标签名称..." 
-                           class="flex-1 bg-[#222] text-white border border-gray-700 rounded px-3 py-2 focus:outline-none focus:border-pink-500">
+                           class="flex-1 bg-[#222] text-white border border-gray-700 rounded px-3 py-2 focus:outline-none focus:border-red-500">
                     <button type="submit" class="ml-2 bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded">添加</button>
                 </form>
                 <p class="text-xs text-gray-500 mt-2">提示：标签名称不能为空，不能重复，不能包含特殊字符</p>
