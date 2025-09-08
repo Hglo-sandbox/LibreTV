@@ -566,7 +566,7 @@ function resetSearchArea() {
 
     // 恢复搜索区域的样式
     document.getElementById('searchArea').classList.add('flex-1');
-    document.getElementById('searchArea').classList.remove('mb-8');
+    document.getElementById('searchArea').classList.remove('mb-2');
     document.getElementById('resultsArea').classList.add('hidden');
 
     // 确保页脚正确显示，移除相对定位
@@ -674,7 +674,7 @@ async function search() {
 
         // 显示结果区域，调整搜索区域
         document.getElementById('searchArea').classList.remove('flex-1');
-        document.getElementById('searchArea').classList.add('mb-8');
+        document.getElementById('searchArea').classList.add('mb-2');
         document.getElementById('resultsArea').classList.remove('hidden');
 
         // 隐藏豆瓣推荐区域（如果存在）
@@ -964,7 +964,7 @@ async function showDetails(id, vod_name, sourceCode) {
                         复制链接
                     </button>
                 </div>
-                <div id="episodesGrid" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2">
+                <div id="episodesGrid" class="grid grid-cols-4 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-2">
                     ${renderEpisodes(vod_name, sourceCode, id)}
                 </div>
             `;
